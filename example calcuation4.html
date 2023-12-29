@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Table</title>
+</head>
+<body>
+
+<table id="incomeTable">
+    <thead>
+        <tr>
+            <th>Business Income</th>
+            <th>Other Income</th>
+            <th>Rent Income</th>
+            <th>Total Income</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="number" id="incbuisness"></td>
+            <td><input type="number" id="incother"></td>
+            <td><input type="number" id="incrent"></td>
+            <td id="totalinc"></td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    const inc1 = document.getElementById('incbuisness');
+    const inc2 = document.getElementById('incother');
+    const inc3 = document.getElementById('incrent');
+    const totalinc = document.getElementById('totalinc');
+
+    function calculateTotal() {
+        // Parse values as floats
+        const val1 = parseFloat(inc1.value) || 0;
+        const val2 = parseFloat(inc2.value) || 0;
+        const val3 = parseFloat(inc3.value) || 0;
+
+        // Calculate total income
+        const total = val1 + val2 + val3;
+
+        // Display the result in the table cell
+        totalinc.textContent = total;
+    }
+
+    // Attach the calculateTotal function to the input event of each input field
+    inc1.addEventListener('input', calculateTotal);
+    inc2.addEventListener('input', calculateTotal);
+    inc3.addEventListener('input', calculateTotal);
+
+    // Initial calculation when the page loads
+    calculateTotal();
+</script>
+
+</body>
+</html>

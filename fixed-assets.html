@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><title>
+    Schedule of other fixed assets
+</title>
+    <head>
+
+        <body>
+            <h1>Schedule of other fixed assets</h1>
+        <label for="FY">F.Y.</label>
+        <input type="text" id="FY" placeholder="Eg-2020-21" >
+        <br>
+        <label for="AY">A.Y.</label>
+        <input type="text" id="AY" placeholder="Eg-2021-22">
+        <br>
+        <hr>
+            <table border="">
+                <th>SR NO.</th>
+                <th>FIXED ASSETS</th>
+                <TH>W.D.V <BR>(START OF YEAR)</BR></TH>
+                <TH>RATE OF DEPRECIATION</TH>
+                <TH>DEPRECIATION IN RS.</TH>
+                <TH>W.D.V <BR>(END OF YEAR)</BR></TH>
+                <tr>
+                    <td>1.</td>
+                    <td><input type="text" id="fa" </td>
+                    <td><input type="text" id="wdvS" > </td>
+                    <td><input type="text" id="rod"></td>   
+                    <td><input type="text" id="dep"></td>
+                    <td><input type="text" id="wdvE"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b>TOTAL RS.</b></td>
+                    <TD id="wdvStotal"></TD>
+                    <td></td>
+                    <td id="deptotal"></td>
+                    <td id="wdvEtotal"></td>
+        
+                </tr>
+            </table>
+        </body>
+    </head>
+
+    <script>
+        const wdvS = document.getElementById('wdvS');
+        const rod = document.getElementById('rod');
+        const dep = document.getElementById('dep');
+        const wdvE = document.getElementById('wdvE');
+
+        
+    </script>
+</html>

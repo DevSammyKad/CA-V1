@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="income-exp.html">income</a>
+          </li>
+          <li><a href="COTI.html">COTI</a></li>
+          <li><a href="fixed-deposits.html">DEPOSITS</a></li>
+          <li><a href="balance-sheet.html">balance-sheet</a></li>
+          <li><a href="fixed-assets.html">assets</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h3>Details</h3>
+    <form action="index.php" method="post">
+      <!-- Temporary php file name given-->
+      <label for="name">Name:</label>
+      <input type="text" name="Name" id="Name" placeholder="Name" required />
+      <br />
+      <label for="fathername">Father's Name:</label>
+      <input
+        type="text"
+        name="fathername"
+        id="fathername"
+        required
+        placeholder="Father's Name"
+      />
+      <br />
+      <label for="address">Address:</label>
+      <input
+        type="text"
+        name="address"
+        id="address"
+        placeholder="Address"
+        required
+      />
+      <br />
+      <label for="DOB">Date of birth:</label>
+      <input type="date" name="DOB" id="DOB" required /><br />
+      <label for="buisnessname">Name of Buisness:</label>
+      <input
+        type="text"
+        name="buisnessname"
+        id="buisnessname required "
+        placeholder="Name Of Buisness"
+      /><br />
+      <label for="natureofbuisness">Nature Of Buisness:</label>
+      <input
+        type="text"
+        name="natureofbuisness"
+        id="natureofbuisness"
+        required
+        placeholder="Nature Of Buisness"
+      />
+      <br />
+      <label for="pan">P.A.N. NO:</label>
+      <input
+        type="text"
+        name="pan"
+        id="pan"
+        required
+        placeholder="PAN Number"
+        maxlength="10"
+      /><br />
+      <label for="status">Status : Individual</label><br />
+      <label for="cellno">CELL NO. : </label>
+      <input
+        type="tel"
+        name="cellno"
+        id="cellno"
+        required
+        placeholder="Phone Number"
+        maxlength="10"
+      /><br />
+      <label for="financialyear">Financial Year:</label>
+      <input
+        type="text"
+        name="financialyear"
+        id="financialyear"
+        required
+        placeholder="Financial Year"
+      /><br />
+      <label for="assessmentyear">Assessment Year:</label>
+      <input
+        type="text"
+        name="assessmentyear"
+        id="assessmentyear"
+        required
+        placeholder="Assessment Year"
+      /><br />
+      <label for="bankacno">Bank A/C NO. (S/B AC):</label>
+      <input
+        type="text"
+        name="bankacno"
+        id="bankacno"
+        placeholder="Savings Bank Account Number"
+        required
+      />
+      (Bank Of Baroda)<br />
+      <label for="ifsc">IFSC:</label>
+      <input
+        type="text"
+        name="ifsc"
+        id="ifsc"
+        placeholder="IFSC Code"
+        required
+      /><br />
+      <label for="email">Email ID:</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        required
+        placeholder="xyz@mail.com"
+      /><br />
+      <label for="uidno">UID No. :</label>
+      <input
+        type="text"
+        name="uidno"
+        id="uidno"
+        pattern="\d{4}-\d{4}-\d{4}"
+        required
+        placeholder="1234-4567-9874"
+      />
+      <br />
+      <!--used a pattern for like aadhar card number-->
+
+      <input type="reset" />
+      <input type="submit" />
+    </form>
+
+    <script>
+      function validateForm() {
+        // Validate Aadhar UID
+        var uidno = document.getElementById('uid').value;
+        var uidnopattern = /\d{4}-\d{4}-\d{4}/;
+
+        if (!uidnopattern.test(uidno)) {
+          alert('Please enter a valid Aadhar Uid No. (e.g., 1234-5678-1234)');
+          return false; // Prevent form submission
+        }
+
+        // Validate PAN
+        var pan = document.getElementById('pan').value;
+        var panpattern = /^[A-Z0-9]+$/;
+
+        if (!panpattern.test(pan)) {
+          alert('Please enter uppercase letters and numbers only for PAN');
+          return false; // Prevent form submission
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>
