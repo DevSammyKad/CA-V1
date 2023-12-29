@@ -1,50 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
     
-    <head>
 <h1>Computation of Total Income</h1>
 <title>Computation of Total Income</title>
-<style>
+
     
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    th, td {
-        border: 1px solid #000;
-        padding: 8px;
-        text-align: left;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    @media print {
-        @page {
-            size: A4 portrait;
-            margin: 20mm;
-        }
-
-        body {
-            margin: 20mm;
-        }
-    }
-    input {
-            border:none;
-        }
-</style>
-
-</style>
-    </head>
-    <body>
+    
         <table border="1">
             <tr>
                 <th width="50">Sr no</th>
@@ -154,88 +122,88 @@
             <td id="refund"></td>
            </tr>
         </table>
-        <script>
-            const inc1 = document.getElementById('incbuisness');
-            const inc2 = document.getElementById('incother');
-            const inc3 = document.getElementById('incrent');
-            const totalinc = document.getElementById('totalinc');
-            const ded1amt = document.getElementById('ded1amt');
-            const ded2amt = document.getElementById('ded2amt');
-            const ded3amt = document.getElementById('ded3amt');
-            const ded4amt = document.getElementById('ded4amt');
-            const afterded = document.getElementById('afterded');
-            const nettaxinc = document.getElementById('nettaxinc');
-            const taxpercent =document.getElementById('taxpercent');
-            const taxoninc= document.getElementById('taxoninc');
-            const rebate = document.getElementById('rebate');
-            const taxpayable = document.getElementById('taxpayable');
-            const educess = document.getElementById('educess');
-            const interest = document.getElementById('interest');
-            const taxwithcess = document.getElementById('taxwithcess');
-            const tds = document.getElementById('tds');
-            const refund = document.getElementById('refund');
-            
-            
         
-            function calculateTotal() {
-                // Parse values as floats
-                const val1 = parseFloat(inc1.value) || 0;
-                const val2 = parseFloat(inc2.value) || 0;
-                const val3 = parseFloat(inc3.value) || 0;
-                const ded1 = parseFloat(ded1amt.value) || 0;
-                const ded2 = parseFloat(ded2amt.value) || 0;
-                const ded3 = parseFloat(ded3amt.value) || 0;
-                const ded4 = parseFloat(ded4amt.value) || 0;
-                const tax = parseFloat(taxpercent.value) || 0;
-                const rebatevalue = parseFloat(rebate.value) || 0;
-                const taxpayablevalue = parseFloat(taxpayable.value) || 0;
-                const educessvalue = parseFloat(educess.value) || 0;
-                const interestvalue = parseFloat(interest.value) || 0;
-                const taxwithcessvalue = parseFloat(taxwithcess.value)|| 0;
-                const tdsvalue = parseFloat(tds.value) || 0 ;
-                const refundvalue= parseFloat(refund.value) || 0;
-               
-                
+</body>
+<script>
+    const inc1 = document.getElementById('incbuisness');
+    const inc2 = document.getElementById('incother');
+    const inc3 = document.getElementById('incrent');
+    const totalinc = document.getElementById('totalinc');
+    const ded1amt = document.getElementById('ded1amt');
+    const ded2amt = document.getElementById('ded2amt');
+    const ded3amt = document.getElementById('ded3amt');
+    const ded4amt = document.getElementById('ded4amt');
+    const afterded = document.getElementById('afterded');
+    const nettaxinc = document.getElementById('nettaxinc');
+    const taxpercent =document.getElementById('taxpercent');
+    const taxoninc= document.getElementById('taxoninc');
+    const rebate = document.getElementById('rebate');
+    const taxpayable = document.getElementById('taxpayable');
+    const educess = document.getElementById('educess');
+    const interest = document.getElementById('interest');
+    const taxwithcess = document.getElementById('taxwithcess');
+    const tds = document.getElementById('tds');
+    const refund = document.getElementById('refund');
+    
+    
+
+    function calculateTotal() {
+        // Parse values as floats
+        const val1 = parseFloat(inc1.value) || 0;
+        const val2 = parseFloat(inc2.value) || 0;
+        const val3 = parseFloat(inc3.value) || 0;
+        const ded1 = parseFloat(ded1amt.value) || 0;
+        const ded2 = parseFloat(ded2amt.value) || 0;
+        const ded3 = parseFloat(ded3amt.value) || 0;
+        const ded4 = parseFloat(ded4amt.value) || 0;
+        const tax = parseFloat(taxpercent.value) || 0;
+        const rebatevalue = parseFloat(rebate.value) || 0;
+        const taxpayablevalue = parseFloat(taxpayable.value) || 0;
+        const educessvalue = parseFloat(educess.value) || 0;
+        const interestvalue = parseFloat(interest.value) || 0;
+        const taxwithcessvalue = parseFloat(taxwithcess.value)|| 0;
+        const tdsvalue = parseFloat(tds.value) || 0 ;
+        const refundvalue= parseFloat(refund.value) || 0;
+       
         
-                // Calculate total income
-                const total1 = val1 + val2 + val3;
-                const total2 = ded1 + ded2 + ded3 + ded4;
-                const total3 = total1 - total2;
-                const taxtotal = total3 * tax / 100;
-                const nettaxpay = taxtotal - rebatevalue;
-                const educessfour = nettaxpay * 4 / 100;
-                const taxcess = nettaxpay - educessfour - interestvalue;
-                const refunddue = taxcess - tdsvalue;
-                
-                
-                // Display the result in the table cell
-                totalinc.textContent = total1;
-                afterded.textContent = total2;
-                nettaxinc.textContent = total3;
-                taxoninc.textContent = taxtotal;
-                taxpayable.textContent = nettaxpay;
-                educess.textContent = educessfour;
-                taxwithcess.textContent = taxcess;
-                tds.textContent = tdsvalue;
-                refund.textContent = refunddue;
-               
-            }
+
+        // Calculate total income
+        const total1 = val1 + val2 + val3;
+        const total2 = ded1 + ded2 + ded3 + ded4;
+        const total3 = total1 - total2;
+        const taxtotal = total3 * tax / 100;
+        const nettaxpay = taxtotal - rebatevalue;
+        const educessfour = nettaxpay * 4 / 100;
+        const taxcess = nettaxpay - educessfour - interestvalue;
+        const refunddue = taxcess - tdsvalue;
         
-            // Attach the calculateTotal function to the input event of each input field
-            inc1.addEventListener('input', calculateTotal);
-            inc2.addEventListener('input', calculateTotal);
-            inc3.addEventListener('input', calculateTotal);
-            ded1amt.addEventListener('input', calculateTotal);
-            ded2amt.addEventListener('input', calculateTotal);
-            ded3amt.addEventListener('input', calculateTotal);
-            ded4amt.addEventListener('input', calculateTotal);
-            taxpercent.addEventListener('input', calculateTotal);
-            rebate.addEventListener('input', calculateTotal);
-            interest.addEventListener('input', calculateTotal);
-            tds.addEventListener('input', calculateTotal)
-            // Initial calculation when the page loads
-            calculateTotal();
-        </script>
         
-    </body>
+        // Display the result in the table cell
+        totalinc.textContent = total1;
+        afterded.textContent = total2;
+        nettaxinc.textContent = total3;
+        taxoninc.textContent = taxtotal;
+        taxpayable.textContent = nettaxpay;
+        educess.textContent = educessfour;
+        taxwithcess.textContent = taxcess;
+        tds.textContent = tdsvalue;
+        refund.textContent = refunddue;
+       
+    }
+
+    // Attach the calculateTotal function to the input event of each input field
+    inc1.addEventListener('input', calculateTotal);
+    inc2.addEventListener('input', calculateTotal);
+    inc3.addEventListener('input', calculateTotal);
+    ded1amt.addEventListener('input', calculateTotal);
+    ded2amt.addEventListener('input', calculateTotal);
+    ded3amt.addEventListener('input', calculateTotal);
+    ded4amt.addEventListener('input', calculateTotal);
+    taxpercent.addEventListener('input', calculateTotal);
+    rebate.addEventListener('input', calculateTotal);
+    interest.addEventListener('input', calculateTotal);
+    tds.addEventListener('input', calculateTotal)
+    // Initial calculation when the page loads
+    calculateTotal();
+</script>
 </html>
