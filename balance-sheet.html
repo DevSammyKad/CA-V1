@@ -266,6 +266,7 @@
         <td><input type="text" id="grandtotalAP" readonly /></td>
       </tr>
     </table>
+    
     <script>
       function addRow(tableId) {
         var table = document.getElementById(tableId);
@@ -278,7 +279,9 @@
 
         cell1.innerHTML = '<input placeholder="" type="text" name="ADD[]">';
         cell2.innerHTML =
-          '<input type="text" name="amount[]" class="amountField">';
+          '<input type="text" name="amount[]" class="amountField" oninput="calculateTotal(\'' +
+          tableId +
+          '\')">';
         cell3.innerHTML =
           '<button type="button" onclick="deleteRow(this, \'' +
           tableId +
@@ -289,6 +292,22 @@
         var row = button.parentNode.parentNode;
         var table = document.getElementById(tableId);
         table.deleteRow(row.rowIndex);
+        calculateTotal(tableId);
+      }
+
+      function calculateTotal(tableId) {
+        var total = 0;
+        var table = document.getElementById(tableId);
+        var rows = table.getElementsByTagName("tr");
+
+        for (var i = 1; i < rows.length - 1; i++) {
+          var row = rows[i];
+          var amountField = row.getElementsByClassName("amountField")[0];
+          var amount = parseFloat(amountField.value) || 0;
+          total += amount;
+        }
+
+        document.getElementById("totalAmount" + tableId.charAt(tableId.length - 1)).value = total;
       }
     </script>
   </body>
