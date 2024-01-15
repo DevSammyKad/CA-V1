@@ -27,14 +27,19 @@
     <form action="connect.php" method="post">
       <!-- Temporary php file name given-->
       <label for="name">Name:</label>
-      <input type="text" name="Name" id="Name" placeholder="Name" required />
+      <input 
+      type="text" 
+      name="name" 
+      id="name" 
+      placeholder="Name" 
+       />
       <br />
       <label for="fathername">Father's Name:</label>
       <input
         type="text"
         name="fathername"
         id="fathername"
-        required
+        
         placeholder="Father's Name"
       />
       <br />
@@ -44,16 +49,20 @@
         name="address"
         id="address"
         placeholder="Address"
-        required
+        
       />
       <br />
-      <label for="DOB">Date of birth:</label>
-      <input type="date" name="DOB" id="DOB" required /><br />
-      <label for="buisnessname">Name of Buisness:</label>
+      <label for="dob">Date of birth:</label>
+      <input 
+      type="text" 
+      name="dob" 
+      id="dob" 
+       /><br />
+      <label for="nameofbuisness">Name of Buisness:</label>
       <input
         type="text"
-        name="buisnessname"
-        id="buisnessname required "
+        name="nameofbuisness"
+        id="nameofbuisness  "
         placeholder="Name Of Buisness"
       /><br />
       <label for="natureofbuisness">Nature Of Buisness:</label>
@@ -61,26 +70,26 @@
         type="text"
         name="natureofbuisness"
         id="natureofbuisness"
-        required
+        
         placeholder="Nature Of Buisness"
       />
       <br />
-      <label for="pan">P.A.N. NO:</label>
+      <label for="pannumber">P.A.N. NO:</label>
       <input
         type="text"
-        name="pan"
-        id="pan"
-        required
+        name="pannumber"
+        id="pannumber"
+        
         placeholder="PAN Number"
         maxlength="10"
       /><br />
       <label for="status">Status : Individual</label><br />
-      <label for="cellno">CELL NO. : </label>
+      <label for="phonenumber">CELL NO. : </label>
       <input
-        type="tel"
-        name="cellno"
-        id="cellno"
-        required
+        type="text"
+        name="phonenumber"
+        id="phonenumber"
+        
         placeholder="Phone Number"
         maxlength="10"
       /><br />
@@ -89,7 +98,7 @@
         type="text"
         name="financialyear"
         id="financialyear"
-        required
+        
         placeholder="Financial Year"
       /><br />
       <label for="assessmentyear">Assessment Year:</label>
@@ -97,16 +106,16 @@
         type="text"
         name="assessmentyear"
         id="assessmentyear"
-        required
+        
         placeholder="Assessment Year"
       /><br />
-      <label for="bankacno">Bank A/C NO. (S/B AC):</label>
+      <label for="bankaccnumber">Bank A/C NO. (S/B AC):</label>
       <input
         type="text"
-        name="bankacno"
-        id="bankacno"
+        name="bankaccnumber"
+        id="bankaccnumber"
         placeholder="Savings Bank Account Number"
-        required
+        
       />
       (Bank Of Baroda)<br />
       <label for="ifsc">IFSC:</label>
@@ -115,54 +124,31 @@
         name="ifsc"
         id="ifsc"
         placeholder="IFSC Code"
-        required
+        
       /><br />
       <label for="email">Email ID:</label>
       <input
         type="email"
         name="email"
         id="email"
-        required
+        
         placeholder="xyz@mail.com"
       /><br />
-      <label for="uidno">UID No. :</label>
+      <label for="uidnumber">UID No. :</label>
       <input
         type="text"
-        name="uidno"
-        id="uidno"
-        pattern="\d{4}-\d{4}-\d{4}"
-        required
+        name="uidnumber"
+        id="uidnumber"
+        
         placeholder="1234-4567-9874"
       />
       <br />
       <!--used a pattern for like aadhar card number-->
 
       <input type="reset" />
-      <input type="submit" value="Submit" />
+      <input type="submit"  value="Submit" />
     </form>
 
-    <script>
-      function validateForm() {
-        // Validate Aadhar UID
-        var uidno = document.getElementById('uid').value;
-        var uidnopattern = /\d{4}-\d{4}-\d{4}/;
-
-        if (!uidnopattern.test(uidno)) {
-          alert('Please enter a valid Aadhar Uid No. (e.g., 1234-5678-1234)');
-          return false; // Prevent form submission
-        }
-
-        // Validate PAN
-        var pan = document.getElementById('pan').value;
-        var panpattern = /^[A-Z0-9]+$/;
-
-        if (!panpattern.test(pan)) {
-          alert('Please enter uppercase letters and numbers only for PAN');
-          return false; // Prevent form submission
-        }
-
-        return true;
-      }
-    </script>
+    
   </body>
 </html>
