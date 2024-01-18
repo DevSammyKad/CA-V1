@@ -28,7 +28,7 @@
 <title>Computation of Total Income</title>
 
     
-    
+    <form action="connectcoti.php" method="post">
         <table border="1">
             <tr>
                 <th width="50">Sr no</th>
@@ -37,9 +37,9 @@
             </tr>
             <tr>
                 <td>1.</td>
-                <td>INCOME FROM BUISNESS OR PROFESSION <br>(NET PROFIT AS PER THE INCOME AND EXPENDITURE ACCOUNT ATTACHED)</td>
+                <td>INCOME FROM BUSI    NESS OR PROFESSION <br>(NET PROFIT AS PER THE INCOME AND EXPENDITURE ACCOUNT ATTACHED)</td>
                 <td>
-                    <input   type="number" name="incbuisness" id="incbuisness">
+                    <input   type="number" name="incbusiness" id="incbusiness">
                 </td>
             </tr>
             <tr>
@@ -57,7 +57,7 @@
             <tr>
                 <td>4.</td>
                 <td>GROSS TOTAL INCOME</td>
-                <td id="totalinc">
+                <td id="totalinc" name="totalinc">xyzx  
                 
                 </td>
             </tr>
@@ -69,79 +69,81 @@
                     <th width="300">Amount in Rs.</th>
                     </tr>
                     <tr>
-                        <td>1) <input type="text" id="ded1"> </td> 
-                        <td><input type="text" id="ded1us" ></td>
-                        <td><input type="number" id="ded1amt"></td>
+                        <td>1) <input type="text" name="ded1" id="ded1"> </td> 
+                        <td><input type="text" id="ded1us" name="ded1us"></td>
+                        <td><input type="number" id="ded1amt" name="ded1amt"></td>
                     </tr>
                     <tr>
-                        <td>2) <input type="text" id="ded2"> </td>
-                        <td><input type="text" id="ded2us"></td>
-                        <td><input type="number" id="ded2amt"></td>
+                        <td>2) <input type="text" id="ded2" name="ded2"> </td>
+                        <td><input type="text" id="ded2us" name="ded2us"></td>
+                        <td><input type="number" id="ded2amt" name="ded2amt"></td>
 
                     </tr>
                     <tr>
-                        <td>3) <input type="text" id="ded3"> </td>
-                        <td><input type="text" id="ded2us"> </td>
-                        <td><input type="text" id="ded3amt"> </td>
+                        <td>3) <input type="text" id="ded3" name="ded3"> </td>
+                        <td><input type="text" id="ded2us" name="ded3us"> </td>
+                        <td><input type="text" id="ded3amt" name="ded3amt"> </td>
                     </tr>
                     <tr>
-                        <td>4) <input type="text" id="ded4"></td>
-                        <td><input type="text" id="ded4us"></td>
-                        <td><input type="text" id="ded4amt"></td>
+                        <td>4) <input type="text" id="ded4" name="ded4"></td>
+                        <td><input type="text" id="ded4us" name="ded4us"></td>
+                        <td><input type="text" id="ded4amt" name="ded4amt"></td>
                     </tr>
                 </table></td>
-                <td id="afterded"></td>
+                <td id="afterded" name="afterded"></td>
             </tr>
             <tr>
                 <td>6.</td>
                 <td>NET TAXABLE INCOME</td>
-                <td id="nettaxinc"></td>
+                <td id="nettaxinc" name="nettaxinc"></td>
             </tr>
             <tr>
                 <td>7.</td>
-                <td>TAX ON ABOVE INCOME <br> <label for="taxpercent">Tax in Percentage% </label> <input type="number" id="taxpercent" > </td>
-                <td id="taxoninc"></td>
+                <td>TAX ON ABOVE INCOME <br> <label for="taxpercent">Tax in Percentage% </label> <input type="number" name="taxpercent" id="taxpercent" > </td>
+                <td name="taxoninc" id="taxoninc"></td>
             </tr>
             <tr>
                 <td>8.</td>
                 <td>LESS: REBATE US 87/A</td>
-                <td><input type="number" id="rebate"></td>
+                <td><input type="number" id="rebate" name="rebate"></td>
             </tr>
             <tr>
                 <td>9.</td>
                 <td>NET TAX PAYABLE</td>
-                <td id="taxpayable"></td>
+                <td id="taxpayable" name="taxpayable"></td>
             </tr>
             <tr>
                 <td>10.</td>
                 <td>ADD: EDUCATION CESS @4</td>
-                <td id="educess"></td>
+                <td id="educess" name="educess"></td>
             </tr>
             <tr>
                 <td>11.</td>
                <td> INTEREST U/S 234 A B C </td>
-               <td><input type="number" id="interest"></td>
+               <td><input type="number" id="interest" name="interest"></td>
             </tr>
             <tr>
                 <td>12.</td>
                 <td>TOTAL TAX PAYABLE WITH EDUCATION CESS PAYABLE</td>
-                <td id="taxwithcess"></td>
+                <td id="taxwithcess" name="taxwithcess"></td>
             </tr>
             <tr>
                 <td>13.</td>
                 <td>LESS: TAX DEDUCTED AT SOURCE</td>
-                <td><input type="number" name="" id="tds"></td>
+                <td><input type="number" name="tds" id="tds"></td>
             </tr>
            <tr>
             <td>14.</td>
             <td>REFUND DUE</td>
-            <td id="refund"></td>
+            <td id="refund" name="refund"></td>
            </tr>
         </table>
+        <input type="submit" value="submit">
+        </form>
         
 </body>
 <script>
-    const inc1 = document.getElementById('incbuisness');
+    const inc1 = document.getElementById('incbusiness');
     const inc2 = document.getElementById('incother');
     const inc3 = document.getElementById('incrent');
     const totalinc = document.getElementById('totalinc');

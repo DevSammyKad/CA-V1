@@ -26,7 +26,8 @@
     <h1>
         INCOME AND EXPENDITURE ACCOUNT
     </h1>
-    <p>For the year ended on <input type="date"></p>
+    <form action="connectincome.php" method="post">
+    <p>For the year ended on <input type="text" name="year" maxlength=""></p>
         
     
             <table>
@@ -38,50 +39,51 @@
                 </th>
                 <tr>
                     <td>To Salaries and Wages</td>
-                    <td><input type="text"  id="SW"></td>
+                    <td><input type="text" id="SW" name="SW"></td>
                 </tr>
                 <tr>
                     <td>To Postage and Telephone and Internet</td>
-                    <td><input type="text" id="PTI"></td>
+                    <td><input type="text" id="PTI" name="PTI"></td>
                 </tr>
                 <tr>
                     <td>To Electricity Charges</td>
-                    <td><input type="text" id="EC"></td>
+                    <td><input type="text" id="EC" name="EC"></td>
                 </tr>
                 <tr>
                     <td>To Printing and Stationary</td>
-                   <td> <input type="text" id="PS"></td>  
+                   <td> <input type="text" id="PS" name="PS"></td>  
                 </tr>
                 <tr>
                     <td>To Travelling and Conveyance</td>
-                    <td><input type="text" id="TC"></td>
+                    <td><input type="text" id="TC"  name="TC"></td>
                 </tr>
                 <tr>
                     <td>To Vehicle Maintainance (Inclunding Fuel, Oil, Insurance, etc)</td>
-                    <td><input type="text" id="VM"></td>
+                    <td><input type="text" id="VM" name="VM"></td>
                 </tr>
                 <tr>
                     <td>To Miscellaneous Expenses</td>
-                    <td><input type="text" id="ME"></td>
+                    <td><input type="text" id="ME" name="ME"></td>
                 </tr>
                 <tr>
                     <td>To Depreciaition (As per Schedule)</td>
-                    <td><input type="text" id="DS"></td>
+                    <td><input type="text" id="DS" name="DS"></td>
                 </tr>
                 <tr>
                     <td>To Depreciaition - Office Building</td>
-                    <td><input type="text" id="DO"></td>
+                    <td><input type="text" id="DO" name="DO"></td>
                 </tr>
                 <tr>
                     <td>By Professional Fees</td>
-                    <td><input type="text" id="PF"></td>
+                    <td><input type="text" id="PF" name="PF"></td>
                 </tr>
                 <tr>
                     <td><b><u>TO NET PROFIT</u></b><br>(Transferred To The Proprietor's Capital Account)</td>
-                    <td id="NP" ></td>
+                    <td name="NP" id="NP" ></td>
                 </tr>
             </table>
-        
+            <input type="submit">
+        </form>
         
 </body>
 <script>
