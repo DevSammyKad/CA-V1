@@ -1,92 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="income-exp.html">income</a>
-            </li>
-            <li><a href="COTI.html">COTI</a></li>
-            <li><a href="fixed-deposits.html">DEPOSITS</a></li>
-            <li><a href="balance-sheet.html">balance-sheet</a></li>
-            <li><a href="fixed-assets.html">assets</a></li>
-          </ul>
-        </nav>
-      </header>
-    <h1>
-        INCOME AND EXPENDITURE ACCOUNT
-    </h1>
-    <form action="connectincome.php" method="post">
-    <p>For the year ended on <input type="text" name="year" maxlength=""></p>
-        
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="income-exp.html">income</a>
+          </li>
+          <li><a href="COTI.html">COTI</a></li>
+          <li><a href="fixed-deposits.html">DEPOSITS</a></li>
+          <li><a href="balance-sheet.html">balance-sheet</a></li>
+          <li><a href="fixed-assets.html">assets</a></li>
+        </ul>
+      </nav>
+    </header>
     
-            <table>
-                <th width="700">
-                    PARTICULARS
-                </th>
-                <th width="150">
-                    AMOUNT IN RS.
-                </th>
-                <tr>
-                    <td>To Salaries and Wages</td>
-                    <td><input type="text" id="SW" name="SW"></td>
-                </tr>
-                <tr>
-                    <td>To Postage and Telephone and Internet</td>
-                    <td><input type="text" id="PTI" name="PTI"></td>
-                </tr>
-                <tr>
-                    <td>To Electricity Charges</td>
-                    <td><input type="text" id="EC" name="EC"></td>
-                </tr>
-                <tr>
-                    <td>To Printing and Stationary</td>
-                   <td> <input type="text" id="PS" name="PS"></td>  
-                </tr>
-                <tr>
-                    <td>To Travelling and Conveyance</td>
-                    <td><input type="text" id="TC"  name="TC"></td>
-                </tr>
-                <tr>
-                    <td>To Vehicle Maintainance (Inclunding Fuel, Oil, Insurance, etc)</td>
-                    <td><input type="text" id="VM" name="VM"></td>
-                </tr>
-                <tr>
-                    <td>To Miscellaneous Expenses</td>
-                    <td><input type="text" id="ME" name="ME"></td>
-                </tr>
-                <tr>
-                    <td>To Depreciaition (As per Schedule)</td>
-                    <td><input type="text" id="DS" name="DS"></td>
-                </tr>
-                <tr>
-                    <td>To Depreciaition - Office Building</td>
-                    <td><input type="text" id="DO" name="DO"></td>
-                </tr>
-                <tr>
-                    <td>By Professional Fees</td>
-                    <td><input type="text" id="PF" name="PF"></td>
-                </tr>
-                <tr>
-                    <td><b><u>TO NET PROFIT</u></b><br>(Transferred To The Proprietor's Capital Account)</td>
-                    <td name="NP" id="NP" ></td>
-                </tr>
-            </table>
-            <input type="submit">
-        </form>
-        
-</body>
-<script>
+
+      <section class="details-section">
+        <h1>INCOME AND EXPENDITURE ACCOUNT</h1>
+    <form action="connectincome.php" method="post">
+     
+        <div class="container">
+          
+            
+          <table>
+            <input type="text" style="border: 1px solid gray; margin: 20px 0px;" name="year" maxlength="" placeholder=" For the year ended on " />
+            <th width="700">PARTICULARS</th>
+            <th width="150">AMOUNT IN RS.</th>
+            <tr>
+              <td>To Salaries and Wages</td>
+              <td><input type="text" id="SW" name="SW" /></td>
+            </tr>
+            <tr>
+              <td>To Postage and Telephone and Internet</td>
+              <td><input type="text" id="PTI" name="PTI" /></td>
+            </tr>
+            <tr>
+              <td>To Electricity Charges</td>
+              <td><input type="text" id="EC" name="EC" /></td>
+            </tr>
+            <tr>
+              <td>To Printing and Stationary</td>
+              <td><input type="text" id="PS" name="PS" /></td>
+            </tr>
+            <tr>
+              <td>To Travelling and Conveyance</td>
+              <td><input type="text" id="TC" name="TC" /></td>
+            </tr>
+            <tr>
+              <td>
+                To Vehicle Maintainance (Inclunding Fuel, Oil, Insurance, etc)
+              </td>
+              <td><input type="text" id="VM" name="VM" /></td>
+            </tr>
+            <tr>
+              <td>To Miscellaneous Expenses</td>
+              <td><input type="text" id="ME" name="ME" /></td>
+            </tr>
+            <tr>
+              <td>To Depreciaition (As per Schedule)</td>
+              <td><input type="text" id="DS" name="DS" /></td>
+            </tr>
+            <tr>
+              <td>To Depreciaition - Office Building</td>
+              <td><input type="text" id="DO" name="DO" /></td>
+            </tr>
+            <tr>
+              <td>By Professional Fees</td>
+              <td><input type="text" id="PF" name="PF" /></td>
+            </tr>
+            <tr>
+              <td>
+                <b><u>TO NET PROFIT</u></b
+                ><br />(Transferred To The Proprietor's Capital Account)
+              </td>
+              <td name="NP" id="NP"></td>
+            </tr>
+          </table>
+          <button class="btn submit" style="margin: 10px auto; width: 400px;" type="submit">
+            Submit
+            
+         </button>
+        </div>
+      </section>
+    
+    </form>
+  </body>
+  <script>
     const SW = document.getElementById('SW');
     const PTI = document.getElementById('PTI');
     const EC = document.getElementById('EC');
@@ -100,19 +109,20 @@
     const NP = document.getElementById('NP');
 
     function CalcNetProfit() {
-        const val1 = parseFloat(SW.value) || 0;
-        const val2 = parseFloat(PTI.value) || 0;
-        const val3 = parseFloat(EC.value) || 0;
-        const val4 = parseFloat(PS.value) || 0;
-        const val5 = parseFloat(TC.value) || 0;
-        const val6 = parseFloat(VM.value) || 0;
-        const val7 = parseFloat(ME.value) || 0;
-        const val8 = parseFloat(DS.value) || 0;
-        const val9 = parseFloat(DO.value) || 0;
-        const val10 = parseFloat(PF.value) || 0;
+      const val1 = parseFloat(SW.value) || 0;
+      const val2 = parseFloat(PTI.value) || 0;
+      const val3 = parseFloat(EC.value) || 0;
+      const val4 = parseFloat(PS.value) || 0;
+      const val5 = parseFloat(TC.value) || 0;
+      const val6 = parseFloat(VM.value) || 0;
+      const val7 = parseFloat(ME.value) || 0;
+      const val8 = parseFloat(DS.value) || 0;
+      const val9 = parseFloat(DO.value) || 0;
+      const val10 = parseFloat(PF.value) || 0;
 
-        const val11 = val1 + val2 + val3 + val4 + val5 + val6 + val7 + val8 + val9 - val10;
-        NP.textContent = val11.toFixed(2);
+      const val11 =
+        val1 + val2 + val3 + val4 + val5 + val6 + val7 + val8 + val9 - val10;
+      NP.textContent = val11.toFixed(2);
     }
 
     SW.addEventListener('input', CalcNetProfit);
@@ -127,5 +137,5 @@
     PF.addEventListener('input', CalcNetProfit);
 
     CalcNetProfit();
-</script>
+  </script>
 </html>

@@ -1,119 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Schedule of fixed deposits with banks</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+
+  <style>
+    .container input {
+      border: 1px solid gray;
+    }
+  </style>
+  <body>
     <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="income-exp.html">income</a>
-            </li>
-            <li><a href="COTI.html">COTI</a></li>
-            <li><a href="fixed-deposits.html">DEPOSITS</a></li>
-            <li><a href="balance-sheet.html">balance-sheet</a></li>
-            <li><a href="fixed-assets.html">assets</a></li>
-          </ul>
-        </nav>
-      </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="income-exp.html">income</a>
+          </li>
+          <li><a href="COTI.html">COTI</a></li>
+          <li><a href="fixed-deposits.html">DEPOSITS</a></li>
+          <li><a href="balance-sheet.html">balance-sheet</a></li>
+          <li><a href="fixed-assets.html">assets</a></li>
+        </ul>
+      </nav>
+    </header>
     <h1>Schedule of fixed deposits with banks</h1>
 
-    <label for="FY">F.Y</label>
-    <input type="text" name="FY" id="FY" placeholder="Eg-2020-21"><br>
+    <section>
+      <div class="container">
+        <div class="grid">
+          <div>
+            <label for="FY">F.Y</label>
+            <input type="text" name="FY" id="FY" placeholder="Eg-2020-21" />
+          </div>
+          <div>
+            <label for="AY">A.Y</label>
+            <input type="text" id="AY" placeholder="Eg-2021-22" />
+          </div>
 
-    <label for="AY">A.Y</label>
-    <input type="text" id="AY" placeholder="Eg-2021-22"><br>
+          <div>
+            <label for="pan">P.A.N. NO.</label>
+            <input type="text" id="pan" placeholder="Pan Number" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <label for="pan">P.A.N. NO.</label>
-    <input type="text" id="pan" placeholder="Pan Number">
+    <hr />
 
-    <hr>
-
-    <table border="1" id="fdTable">
+    <div class="container">
+      <table border="1" id="fdTable">
         <thead>
-            <tr>
-                <th>SR No.</th>
-                <th>BANKS</th>
-                <th>R.NO.</th>
-                <th>AMT RS.</th>
-                <th>FACE VALUE</th>
-                <th>Action</th>
-            </tr>
+          <tr>
+            <th>SR No.</th>
+            <th>BANKS</th>
+            <th>R.NO.</th>
+            <th>AMT RS.</th>
+            <th>FACE VALUE</th>
+            <th>Action</th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td><input class="bank" type="text"></td>
-                <td><input class="rno" type="text"></td>
-                <td><input class="amt" type="number" oninput="calculateTotal()"></td>
-                <td><input class="facevalue" type="text"></td>
-                <td><button onclick="deleteRow(this)">Delete</button></td>
-            </tr>
-            <!-- Add more rows as needed -->
+          <tr>
+            <td>1</td>
+            <td><input class="bank" type="text" /></td>
+            <td><input class="rno" type="text" /></td>
+            <td>
+              <input class="amt" type="number" oninput="calculateTotal()" />
+            </td>
+            <td><input class="facevalue" type="text" /></td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+          </tr>
+          <!-- Add more rows as needed -->
         </tbody>
-    </table>
+      </table>
+    </div>
 
     <table border="1">
-        <thead>
-            <tr>
-                <th>Total Rs.</th>
-                <th id="total">0</th>
-            </tr>
-        </thead>
+      <thead>
+        <tr>
+          <th>Total Rs.</th>
+          <th id="total">0</th>
+        </tr>
+      </thead>
     </table>
 
     <button onclick="addRow()">Add Row</button>
 
     <script>
-        function addRow() {
-            var table = document.getElementById("fdTable").getElementsByTagName('tbody')[0];
-            var newRow = table.insertRow(table.rows.length);
-            var index = table.rows.length;
+      function addRow() {
+        var table = document
+          .getElementById('fdTable')
+          .getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow(table.rows.length);
+        var index = table.rows.length;
 
-            var cell1 = newRow.insertCell(0);
-            var cell2 = newRow.insertCell(1);
-            var cell3 = newRow.insertCell(2);
-            var cell4 = newRow.insertCell(3);
-            var cell5 = newRow.insertCell(4);
-            var cell6 = newRow.insertCell(5);
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+        var cell6 = newRow.insertCell(5);
 
-            cell1.innerHTML = index;
-            cell2.innerHTML = '<input class="bank" type="text">';
-            cell3.innerHTML = '<input class="rno" type="text">';
-            cell4.innerHTML = '<input class="amt" type="number" oninput="calculateTotal()">';
-            cell5.innerHTML = '<input class="facevalue" type="text">';
-            cell6.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
+        cell1.innerHTML = index;
+        cell2.innerHTML = '<input class="bank" type="text">';
+        cell3.innerHTML = '<input class="rno" type="text">';
+        cell4.innerHTML =
+          '<input class="amt" type="number" oninput="calculateTotal()">';
+        cell5.innerHTML = '<input class="facevalue" type="text">';
+        cell6.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
+      }
+
+      function deleteRow(button) {
+        var row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+        calculateTotal();
+      }
+
+      function calculateTotal() {
+        var table = document
+          .getElementById('fdTable')
+          .getElementsByTagName('tbody')[0];
+        var rows = table.getElementsByTagName('tr');
+        var total = 0;
+
+        for (var i = 0; i < rows.length; i++) {
+          var amtCell = rows[i].getElementsByClassName('amt')[0];
+          if (amtCell) {
+            total += parseFloat(amtCell.value) || 0;
+          }
         }
 
-        function deleteRow(button) {
-            var row = button.parentNode.parentNode;
-            row.parentNode.removeChild(row);
-            calculateTotal();
-        }
-
-        function calculateTotal() {
-            var table = document.getElementById("fdTable").getElementsByTagName('tbody')[0];
-            var rows = table.getElementsByTagName('tr');
-            var total = 0;
-
-            for (var i = 0; i < rows.length; i++) {
-                var amtCell = rows[i].getElementsByClassName("amt")[0];
-                if (amtCell) {
-                    total += parseFloat(amtCell.value) || 0;
-                }
-            }
-
-            document.getElementById("total").innerText = total;
-        }
+        document.getElementById('total').innerText = total;
+      }
     </script>
-</body>
+  </body>
 </html>
