@@ -30,9 +30,10 @@
         </ul>
       </nav>
     </header>
-    <h1>Schedule of fixed deposits with banks</h1>
 
-    <section>
+    <section class="details-section">
+      <h1>Schedule of fixed deposits with banks</h1>
+
       <div class="container">
         <div class="grid">
           <div>
@@ -49,50 +50,57 @@
             <input type="text" id="pan" placeholder="Pan Number" />
           </div>
         </div>
+
+        <div class="container">
+          <table border="1" id="fdTable">
+            <thead>
+              <tr>
+                <th>SR No.</th>
+                <th>BANKS</th>
+                <th>R.NO.</th>
+                <th>AMT RS.</th>
+                <th>FACE VALUE</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><input class="bank" type="text" /></td>
+                <td><input class="rno" type="text" /></td>
+                <td>
+                  <input class="amt" type="number" oninput="calculateTotal()" />
+                </td>
+                <td><input class="facevalue" type="text" /></td>
+                <td>
+                  <button class="btn-del btn" onclick="deleteRow(this)">
+                    Delete
+                  </button>
+                </td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Total Rs.</th>
+              <th id="total">0</th>
+            </tr>
+          </thead>
+        </table>
+
+        <button
+          class="btn btn-addrow"
+          style="width: 400px; margin: 20px auto"
+          onclick="addRow()"
+        >
+          Add Row
+        </button>
       </div>
     </section>
-
-    <hr />
-
-    <div class="container">
-      <table border="1" id="fdTable">
-        <thead>
-          <tr>
-            <th>SR No.</th>
-            <th>BANKS</th>
-            <th>R.NO.</th>
-            <th>AMT RS.</th>
-            <th>FACE VALUE</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td><input class="bank" type="text" /></td>
-            <td><input class="rno" type="text" /></td>
-            <td>
-              <input class="amt" type="number" oninput="calculateTotal()" />
-            </td>
-            <td><input class="facevalue" type="text" /></td>
-            <td><button onclick="deleteRow(this)">Delete</button></td>
-          </tr>
-          <!-- Add more rows as needed -->
-        </tbody>
-      </table>
-    </div>
-
-    <table border="1">
-      <thead>
-        <tr>
-          <th>Total Rs.</th>
-          <th id="total">0</th>
-        </tr>
-      </thead>
-    </table>
-
-    <button onclick="addRow()">Add Row</button>
-
     <script>
       function addRow() {
         var table = document

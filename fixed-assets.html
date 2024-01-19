@@ -23,51 +23,62 @@
           </ul>
         </nav>
       </header>
-    <h1>Schedule of other fixed assets</h1>
-    <label for="FY">F.Y.</label>
-    <input type="text" id="FY" placeholder="Eg-2020-21">
-    <br>
-    <label for="AY">A.Y.</label>
-    <input type="text" id="AY" placeholder="Eg-2021-22">
-    <br>
-    <hr>
-    <table border="1" id="assetTable">
-        <thead>
-            <tr>
-                <th>SR NO.</th>
-                <th>FIXED ASSETS</th>
-                <th>W.D.V <br>(START OF YEAR)</br></th>
-                <th>RATE OF DEPRECIATION</th>
-                <th>DEPRECIATION IN RS.</th>
-                <th>W.D.V <br>(END OF YEAR)</br></th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1.</td>
-                <td><input type="text" class="fa"></td>
-                <td><input type="text" class="wdvS"></td>
-                <td><input type="text" class="rod"></td>
-                <td><input readonly type="text" class="dep"></td>
-                <td><input readonly type="text" class="wdvE"></td>
-                <td><button type="button" onclick="deleteRow(this)">Delete</button></td>
-            </tr>
-        </tbody>
-    </table>
-    <br>
-    <button type="button" onclick="addRow()">Add Row</button>
 
-    <table border="1">
-        <tr>
-            <td></td>
-            <td><b>TOTAL RS.</b></td>
-            <td id="wdvStotal"></td>
-            <td></td>
-            <td id="deptotal"></td>
-            <td id="wdvEtotal"></td>
-        </tr>
-    </table>
+      <section class="details-section">
+          <div class="container">
+            <h1>Schedule of other fixed assets</h1>
+            <div class="flex">
+                <div>
+                    <label for="FY">F.Y.</label>
+                    <input type="text" id="FY" placeholder="Eg-2020-21">
+                    </div>
+                    
+                    <div>
+                    <label for="AY">A.Y.</label>
+                    <input type="text" id="AY" placeholder="Eg-2021-22">
+                    </div>
+            </div>
+            
+            <hr>
+            <table id="assetTable">
+                <thead>
+                    <tr>
+                        <th>SR NO.</th>
+                        <th>FIXED ASSETS</th>
+                        <th>W.D.V <br>(START OF YEAR)</br></th>
+                        <th>RATE OF DEPRECIATION</th>
+                        <th>DEPRECIATION IN RS.</th>
+                        <th>W.D.V <br>(END OF YEAR)</br></th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td><input type="text" class="fa"></td>
+                        <td><input type="text" class="wdvS"></td>
+                        <td><input type="text" class="rod"></td>
+                        <td><input readonly type="text" class="dep"></td>
+                        <td><input readonly type="text" class="wdvE"></td>
+                        <td><button type="button" onclick="deleteRow(this)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button type="button" class="btn-addrow btn" style="width: 400px; margin: 20px auto;" onclick="addRow()">Add Row</button>
+        
+            <table>
+                <tr>
+                    <td></td>
+                    <td><b>TOTAL RS.</b></td>
+                    <td id="wdvStotal"></td>
+                    <td></td>
+                    <td id="deptotal"></td>
+                    <td id="wdvEtotal"></td>
+                </tr>
+            </table>
+          </div>
+      </section>
 
     <script>
         function calculateTotal() {

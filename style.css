@@ -79,10 +79,17 @@ table {
   width: 100%;
   border: none;
 }
+thead,
+tbody,
+tr,
+td,
+th {
+  border: none;
+}
 
 th,
 td {
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
   padding: 8px;
   text-align: left;
 }
@@ -139,4 +146,15 @@ table input {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+/* Fixed assetts */
+
+.flex {
+  display: flex;
+  margin: 30px 0px;
+  gap: 100px;
+}
+.flex input {
+  border: 1px solid gray;
 }
