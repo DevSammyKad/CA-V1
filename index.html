@@ -23,132 +23,171 @@
         </ul>
       </nav>
     </header>
-    <h3>Details</h3>
+
     <form action="connectindex.php" method="post">
       <!-- Temporary php file name given-->
-      <label for="name">Name:</label>
-      <input 
-      type="text" 
-      name="name" 
-      id="name" 
-      placeholder="Name" 
-       />
-      <br />
-      <label for="fathername">Father's Name:</label>
-      <input
-        type="text"
-        name="fathername"
-        id="fathername"
-        
-        placeholder="Father's Name"
-      />
-      <br />
-      <label for="address">Address:</label>
-      <input
-        type="text"
-        name="address"
-        id="address"
-        placeholder="Address"
-        
-      />
-      <br />
-      <label for="dob">Date of birth:</label>
-      <input 
-      type="text" 
-      name="dob" 
-      id="dob" 
-       /><br />
-      <label for="businessname">Name of Business:</label>
-      <input
-        type="text"
-        name="businessname"
-        id="businessname"
-        placeholder="Name Of Business"
-      /><br />
-      <label for="businessnature">Nature Of Business:</label>
-      <input
-        type="text"
-        name="businessnature"
-        id="businessnature"
-        
-        placeholder="Nature Of Business"
-      />
-      <br />
-      <label for="pannumber">P.A.N. NO:</label>
-      <input
-        type="text"
-        name="pannumber"
-        id="pannumber"
-        
-        placeholder="PAN Number"
-        maxlength="10"
-      /><br />
-      <label for="status">Status : Individual</label><br />
-      <label for="phonenumber">CELL NO. : </label>
-      <input
-        type="text"
-        name="phonenumber"
-        id="phonenumber"
-        
-        placeholder="Phone Number"
-        maxlength="10"
-      /><br />
-      <label for="financialyear">Financial Year:</label>
-      <input
-        type="text"
-        name="financialyear"
-        id="financialyear"
-        
-        placeholder="Financial Year"
-      /><br />
-      <label for="assessmentyear">Assessment Year:</label>
-      <input
-        type="text"
-        name="assessmentyear"
-        id="assessmentyear"
-        
-        placeholder="Assessment Year"
-      /><br />
-      <label for="bankaccnumber">Bank A/C NO. (S/B AC):</label>
-      <input
-        type="text"
-        name="bankaccnumber"
-        id="bankaccnumber"
-        placeholder="Savings Bank Account Number"
-        
-      />
-      (Bank Of Baroda)<br />
-      <label for="ifsc">IFSC:</label>
-      <input
-        type="text"
-        name="ifsc"
-        id="ifsc"
-        placeholder="IFSC Code"
-        
-      /><br />
-      <label for="email">Email ID:</label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        
-        placeholder="xyz@mail.com"
-      /><br />
-      <label for="uidnumber">UID No. :</label>
-      <input
-        type="text"
-        name="uidnumber"
-        id="uidnumber"
-        
-        placeholder="1234-4567-9874"
-      />
-      <br />
-      <!--used a pattern for like aadhar card number-->
 
-      <input type="reset" />
-      <a href="COTI.html">
-      <input type="submit" value="Submit" />
-      </a>
+      <section class="details-section">
+        <div class="details-container">
+          <!-- First  Grid -->
+          <h1>Enter Basic Details</h1>
+          <div class="grid-three">
+            <div class="input-div">
+              <label for="name">Name:</label>
+              <input type="text" name="name" id="name" placeholder="Name" />
+            </div>
+
+            <div class="input-div">
+              <label for="fathername">Father's Name:</label>
+              <input
+                type="text"
+                name="fathername"
+                id="fathername"
+                placeholder="Father's Name"
+              />
+            </div>
+
+            <div class="input-div">
+              <label for="address">Address:</label>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="Address"
+              />
+            </div>
+            <div class="input-div">
+              <label for="dob">Date of birth:</label>
+              <input type="date" name="dob" id="dob" />
+            </div>
+          </div>
+
+          <!-- Second Grid -->
+          <h1>Enter business Details</h1>
+          <div class="grid-three">
+            <div class="input-div">
+              <label for="businessname">Name of Business:</label>
+              <input
+                type="text"
+                name="businessname"
+                id="businessname"
+                placeholder="Name Of Business"
+              />
+            </div>
+            <div class="input-div">
+              <label for="businessnature">Nature Of Business:</label>
+              <input
+                type="text"
+                name="businessnature"
+                id="businessnature"
+                placeholder="Nature Of Business"
+              />
+            </div>
+
+            <div class="input-div">
+              <label for="pannumber">P.A.N. NO:</label>
+              <input
+                type="text"
+                name="pannumber"
+                id="pannumber"
+                placeholder="PAN Number"
+                maxlength="10"
+              />
+            </div>
+            <div class="input-div">
+              <label for="status">Status</label>
+              <select name="status" id="status">
+                <option value="Individual">Individual</option>
+                <option value="Company">Company</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Third Grid -->
+          <div class="grid-three">
+            <div class="input-div">
+              <label for="phonenumber">CELL NO. : </label>
+              <input
+                type="text"
+                name="phonenumber"
+                id="phonenumber"
+                placeholder="Phone Number"
+                maxlength="10"
+              />
+            </div>
+
+            <div class="input-div">
+              <label for="financialyear">Financial Year:</label>
+              <input
+                type="text"
+                name="financialyear"
+                id="financialyear"
+                placeholder="Financial Year"
+              />
+            </div>
+
+            <div class="input-div">
+              <label for="assessmentyear">Assessment Year:</label>
+              <input
+                type="text"
+                name="assessmentyear"
+                id="assessmentyear"
+                placeholder="Assessment Year"
+              />
+            </div>
+          </div>
+
+          <!-- Forth Grid -->
+          <h1>Enter Bank Details</h1>
+          <div class="grid-three">
+            <div class="input-div">
+              <label for="bankaccnumber">Bank A/C NO. (S/B AC):</label>
+              <input
+                type="text"
+                name="bankaccnumber"
+                id="bankaccnumber"
+                placeholder="Savings Bank Account Number"
+              />
+            </div>
+
+            <div class="input-div">
+              <label for="ifsc">IFSC:</label>
+              <input
+                type="text"
+                name="ifsc"
+                id="ifsc"
+                placeholder="IFSC Code"
+              />
+            </div>
+
+            <div class="input-div">
+              <label for="email">Email ID:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="xyz@mail.com"
+              />
+            </div>
+            <div class="input-div">
+              <label for="uidnumber">UID No. :</label>
+              <input
+                type="text"
+                name="uidnumber"
+                id="uidnumber"
+                placeholder="1234-4567-9874"
+              />
+            </div>
+          </div>
+
+          <!--used a pattern for like aadhar card number-->
+
+          <div>
+            <button class="btn reset" type="reset">Reset</button>
+            <button class="btn submit" type="submit">Submit</button>
+          </div>
+        </div>
+      </section>
     </form>
   </body>
 </html>

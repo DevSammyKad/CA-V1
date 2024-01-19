@@ -8,14 +8,45 @@
 html,
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #e9ecef;
 }
-input {
+label {
+  margin: 10px 0px;
+}
+input,
+select {
   outline: none;
   padding: 10px 16px;
-  border: 0.5px solid #000;
+  border: none;
   border-radius: 5px;
 }
-
+input:focus {
+  border: 0.8px solid rgb(104, 104, 197);
+}
+.btn {
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-del {
+  background-color: red;
+  color: white;
+}
+.btn-addrow {
+  background-color: rgb(76, 76, 234);
+  color: white;
+}
+.reset {
+  background-color: rgb(215, 158, 158);
+}
+.submit {
+  background-color: rgb(43, 43, 156);
+  color: #ffffff;
+}
 header {
   width: 100%;
   background-color: #333;
@@ -46,6 +77,7 @@ li a {
 table {
   border-collapse: collapse;
   width: 100%;
+  border: none;
 }
 
 th,
@@ -58,4 +90,48 @@ td {
 button {
   padding: 5px;
   margin: 5px;
+}
+
+/* Index.html */
+
+.details-section {
+  width: 90%;
+  margin: 40px auto;
+}
+.details-container {
+  display: grid;
+  grid-template-columns: repeat(4 1fr);
+  background-color: white;
+  padding: 40px 40px;
+  border-radius: 40px;
+}
+
+.grid-three {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  background-color: #bde0fe;
+  padding: 40px;
+  border-radius: 15px;
+  margin: 20px 0px;
+}
+.input-div {
+  display: grid;
+}
+
+/* Balance Sheet */
+
+.details-section {
+  width: 90%;
+  margin: 40px auto;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4 1fr);
+  background-color: white;
+  padding: 40px 40px;
+  border-radius: 40px;
+}
+table input {
+  border: 1px solid gray;
 }
