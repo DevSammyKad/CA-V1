@@ -1,148 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computation of Total Income</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="income-exp.html">income</a>
-            </li>
-            <li><a href="COTI.html">COTI</a></li>
-            <li><a href="fixed-deposits.html">DEPOSITS</a></li>
-            <li><a href="balance-sheet.html">balance-sheet</a></li>
-            <li><a href="fixed-assets.html">assets</a></li>
-          </ul>
-        </nav>
-      </header>
-    
-<h1>Computation of Total Income</h1>
-<title>Computation of Total Income</title>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="income-exp.html">income</a>
+          </li>
+          <li><a href="COTI.html">COTI</a></li>
+          <li><a href="fixed-deposits.html">DEPOSITS</a></li>
+          <li><a href="balance-sheet.html">balance-sheet</a></li>
+          <li><a href="fixed-assets.html">assets</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    
-    <form action="connectcoti.php" method="post">
-        <table border="1">
+    <section class="details-section">
+      <h1>Computation of Total Income</h1>
+      <div class="container">
+        <form action="connectcoti.php" method="post">
+          <table border="1">
             <tr>
-                <th width="50">Sr no</th>
-                <th width="1000">Particulars</th>
-                <th width="70" >Amount in Rs.</th>
+              <th width="50">Sr no</th>
+              <th width="1000">Particulars</th>
+              <th width="70">Amount in Rs.</th>
             </tr>
             <tr>
-                <td>1.</td>
-                <td>INCOME FROM BUSI    NESS OR PROFESSION <br>(NET PROFIT AS PER THE INCOME AND EXPENDITURE ACCOUNT ATTACHED)</td>
-                <td>
-                    <input   type="number" name="incbusiness" id="incbusiness">
-                </td>
+              <td>1.</td>
+              <td>
+                INCOME FROM BUSI NESS OR PROFESSION <br />(NET PROFIT AS PER THE
+                INCOME AND EXPENDITURE ACCOUNT ATTACHED)
+              </td>
+              <td>
+                <input type="number" name="incbusiness" id="incbusiness" />
+              </td>
             </tr>
             <tr>
-                <td>2.</td>
-                <td>INCOME FROM OTHER SOURCES <br> (F/D INTEREST + S/B RS + DIVIDEND + COMMISSION</td>
-                <td>
-                    <input type="number" name="incother" id="incother">
-                </td>
+              <td>2.</td>
+              <td>
+                INCOME FROM OTHER SOURCES <br />
+                (F/D INTEREST + S/B RS + DIVIDEND + COMMISSION
+              </td>
+              <td>
+                <input type="number" name="incother" id="incother" />
+              </td>
             </tr>
             <tr>
-                <td>3.</td>
-                <td>INCOME FROM HOUSE PROPERTY (LEASED OUT PROPERTIES) <br> RENT RECIEVED AT FLAT <br> LESS: STANDARD DEDUCTION U/S 24 @ 30% <br> LESS: INTEREST ON HOUSING LOAN </td>
-                <td><input type="number" name="incrent" id="incrent"></td>
+              <td>3.</td>
+              <td>
+                INCOME FROM HOUSE PROPERTY (LEASED OUT PROPERTIES) <br />
+                RENT RECIEVED AT FLAT <br />
+                LESS: STANDARD DEDUCTION U/S 24 @ 30% <br />
+                LESS: INTEREST ON HOUSING LOAN
+              </td>
+              <td><input type="number" name="incrent" id="incrent" /></td>
             </tr>
             <tr>
-                <td>4.</td>
-                <td>GROSS TOTAL INCOME</td>
-                <td id="totalinc" name="totalinc">xyzx  
-                
-                </td>
+              <td>4.</td>
+              <td>GROSS TOTAL INCOME</td>
+              <td id="totalinc" name="totalinc">xyzx</td>
             </tr>
             <tr>
-                <td>5.</td>
-                <td> <table border="1"><tr>
+              <td>5.</td>
+              <td>
+                <table border="1">
+                  <tr>
                     <th width="600">LESS:DEDUCTION UNDER VI/A</th>
                     <th width="100">U/S</th>
                     <th width="300">Amount in Rs.</th>
-                    </tr>
-                    <tr>
-                        <td>1) <input type="text" name="ded1" id="ded1"> </td> 
-                        <td><input type="text" id="ded1us" name="ded1us"></td>
-                        <td><input type="number" id="ded1amt" name="ded1amt"></td>
-                    </tr>
-                    <tr>
-                        <td>2) <input type="text" id="ded2" name="ded2"> </td>
-                        <td><input type="text" id="ded2us" name="ded2us"></td>
-                        <td><input type="number" id="ded2amt" name="ded2amt"></td>
-
-                    </tr>
-                    <tr>
-                        <td>3) <input type="text" id="ded3" name="ded3"> </td>
-                        <td><input type="text" id="ded2us" name="ded3us"> </td>
-                        <td><input type="text" id="ded3amt" name="ded3amt"> </td>
-                    </tr>
-                    <tr>
-                        <td>4) <input type="text" id="ded4" name="ded4"></td>
-                        <td><input type="text" id="ded4us" name="ded4us"></td>
-                        <td><input type="text" id="ded4amt" name="ded4amt"></td>
-                    </tr>
-                </table></td>
-                <td id="afterded" name="afterded"></td>
+                  </tr>
+                  <tr>
+                    <td>1) <input type="text" name="ded1" id="ded1" /></td>
+                    <td><input type="text" id="ded1us" name="ded1us" /></td>
+                    <td><input type="number" id="ded1amt" name="ded1amt" /></td>
+                  </tr>
+                  <tr>
+                    <td>2) <input type="text" id="ded2" name="ded2" /></td>
+                    <td><input type="text" id="ded2us" name="ded2us" /></td>
+                    <td><input type="number" id="ded2amt" name="ded2amt" /></td>
+                  </tr>
+                  <tr>
+                    <td>3) <input type="text" id="ded3" name="ded3" /></td>
+                    <td><input type="text" id="ded2us" name="ded3us" /></td>
+                    <td><input type="text" id="ded3amt" name="ded3amt" /></td>
+                  </tr>
+                  <tr>
+                    <td>4) <input type="text" id="ded4" name="ded4" /></td>
+                    <td><input type="text" id="ded4us" name="ded4us" /></td>
+                    <td><input type="text" id="ded4amt" name="ded4amt" /></td>
+                  </tr>
+                </table>
+              </td>
+              <td id="afterded" name="afterded"></td>
             </tr>
             <tr>
-                <td>6.</td>
-                <td>NET TAXABLE INCOME</td>
-                <td id="nettaxinc" name="nettaxinc"></td>
+              <td>6.</td>
+              <td>NET TAXABLE INCOME</td>
+              <td id="nettaxinc" name="nettaxinc"></td>
             </tr>
             <tr>
-                <td>7.</td>
-                <td>TAX ON ABOVE INCOME <br> <label for="taxpercent">Tax in Percentage% </label> <input type="number" name="taxpercent" id="taxpercent" > </td>
-                <td name="taxoninc" id="taxoninc"></td>
+              <td>7.</td>
+              <td>
+                TAX ON ABOVE INCOME <br />
+                <label for="taxpercent">Tax in Percentage% </label>
+                <input type="number" name="taxpercent" id="taxpercent" />
+              </td>
+              <td name="taxoninc" id="taxoninc"></td>
             </tr>
             <tr>
-                <td>8.</td>
-                <td>LESS: REBATE US 87/A</td>
-                <td><input type="number" id="rebate" name="rebate"></td>
+              <td>8.</td>
+              <td>LESS: REBATE US 87/A</td>
+              <td><input type="number" id="rebate" name="rebate" /></td>
             </tr>
             <tr>
-                <td>9.</td>
-                <td>NET TAX PAYABLE</td>
-                <td id="taxpayable" name="taxpayable"></td>
+              <td>9.</td>
+              <td>NET TAX PAYABLE</td>
+              <td id="taxpayable" name="taxpayable"></td>
             </tr>
             <tr>
-                <td>10.</td>
-                <td>ADD: EDUCATION CESS @4</td>
-                <td id="educess" name="educess"></td>
+              <td>10.</td>
+              <td>ADD: EDUCATION CESS @4</td>
+              <td id="educess" name="educess"></td>
             </tr>
             <tr>
-                <td>11.</td>
-               <td> INTEREST U/S 234 A B C </td>
-               <td><input type="number" id="interest" name="interest"></td>
+              <td>11.</td>
+              <td>INTEREST U/S 234 A B C</td>
+              <td><input type="number" id="interest" name="interest" /></td>
             </tr>
             <tr>
-                <td>12.</td>
-                <td>TOTAL TAX PAYABLE WITH EDUCATION CESS PAYABLE</td>
-                <td id="taxwithcess" name="taxwithcess"></td>
+              <td>12.</td>
+              <td>TOTAL TAX PAYABLE WITH EDUCATION CESS PAYABLE</td>
+              <td id="taxwithcess" name="taxwithcess"></td>
             </tr>
             <tr>
-                <td>13.</td>
-                <td>LESS: TAX DEDUCTED AT SOURCE</td>
-                <td><input type="number" name="tds" id="tds"></td>
+              <td>13.</td>
+              <td>LESS: TAX DEDUCTED AT SOURCE</td>
+              <td><input type="number" name="tds" id="tds" /></td>
             </tr>
-           <tr>
-            <td>14.</td>
-            <td>REFUND DUE</td>
-            <td id="refund" name="refund"></td>
-           </tr>
-        </table>
-        <input type="submit" value="submit">
+            <tr>
+              <td>14.</td>
+              <td>REFUND DUE</td>
+              <td id="refund" name="refund"></td>
+            </tr>
+          </table>
+          <input type="submit" value="submit" />
         </form>
-        
-</body>
-<script>
+      </div>
+    </section>
+  </body>
+  <script>
     const inc1 = document.getElementById('incbusiness');
     const inc2 = document.getElementById('incother');
     const inc3 = document.getElementById('incrent');
@@ -153,8 +168,8 @@
     const ded4amt = document.getElementById('ded4amt');
     const afterded = document.getElementById('afterded');
     const nettaxinc = document.getElementById('nettaxinc');
-    const taxpercent =document.getElementById('taxpercent');
-    const taxoninc= document.getElementById('taxoninc');
+    const taxpercent = document.getElementById('taxpercent');
+    const taxoninc = document.getElementById('taxoninc');
     const rebate = document.getElementById('rebate');
     const taxpayable = document.getElementById('taxpayable');
     const educess = document.getElementById('educess');
@@ -162,51 +177,45 @@
     const taxwithcess = document.getElementById('taxwithcess');
     const tds = document.getElementById('tds');
     const refund = document.getElementById('refund');
-    
-    
 
     function calculateTotal() {
-        // Parse values as floats
-        const val1 = parseFloat(inc1.value) || 0;
-        const val2 = parseFloat(inc2.value) || 0;
-        const val3 = parseFloat(inc3.value) || 0;
-        const ded1 = parseFloat(ded1amt.value) || 0;
-        const ded2 = parseFloat(ded2amt.value) || 0;
-        const ded3 = parseFloat(ded3amt.value) || 0;
-        const ded4 = parseFloat(ded4amt.value) || 0;
-        const tax = parseFloat(taxpercent.value) || 0;
-        const rebatevalue = parseFloat(rebate.value) || 0;
-        const taxpayablevalue = parseFloat(taxpayable.value) || 0;
-        const educessvalue = parseFloat(educess.value) || 0;
-        const interestvalue = parseFloat(interest.value) || 0;
-        const taxwithcessvalue = parseFloat(taxwithcess.value)|| 0;
-        const tdsvalue = parseFloat(tds.value) || 0 ;
-        const refundvalue= parseFloat(refund.value) || 0;
-       
-        
+      // Parse values as floats
+      const val1 = parseFloat(inc1.value) || 0;
+      const val2 = parseFloat(inc2.value) || 0;
+      const val3 = parseFloat(inc3.value) || 0;
+      const ded1 = parseFloat(ded1amt.value) || 0;
+      const ded2 = parseFloat(ded2amt.value) || 0;
+      const ded3 = parseFloat(ded3amt.value) || 0;
+      const ded4 = parseFloat(ded4amt.value) || 0;
+      const tax = parseFloat(taxpercent.value) || 0;
+      const rebatevalue = parseFloat(rebate.value) || 0;
+      const taxpayablevalue = parseFloat(taxpayable.value) || 0;
+      const educessvalue = parseFloat(educess.value) || 0;
+      const interestvalue = parseFloat(interest.value) || 0;
+      const taxwithcessvalue = parseFloat(taxwithcess.value) || 0;
+      const tdsvalue = parseFloat(tds.value) || 0;
+      const refundvalue = parseFloat(refund.value) || 0;
 
-        // Calculate total income
-        const total1 = val1 + val2 + val3;
-        const total2 = ded1 + ded2 + ded3 + ded4;
-        const total3 = total1 - total2;
-        const taxtotal = total3 * tax / 100;
-        const nettaxpay = taxtotal - rebatevalue;
-        const educessfour = nettaxpay * 4 / 100;
-        const taxcess = nettaxpay - educessfour - interestvalue;
-        const refunddue = taxcess - tdsvalue;
-        
-        
-        // Display the result in the table cell
-        totalinc.textContent = total1;
-        afterded.textContent = total2;
-        nettaxinc.textContent = total3;
-        taxoninc.textContent = taxtotal;
-        taxpayable.textContent = nettaxpay;
-        educess.textContent = educessfour;
-        taxwithcess.textContent = taxcess;
-        tds.textContent = tdsvalue;
-        refund.textContent = refunddue;
-       
+      // Calculate total income
+      const total1 = val1 + val2 + val3;
+      const total2 = ded1 + ded2 + ded3 + ded4;
+      const total3 = total1 - total2;
+      const taxtotal = (total3 * tax) / 100;
+      const nettaxpay = taxtotal - rebatevalue;
+      const educessfour = (nettaxpay * 4) / 100;
+      const taxcess = nettaxpay - educessfour - interestvalue;
+      const refunddue = taxcess - tdsvalue;
+
+      // Display the result in the table cell
+      totalinc.textContent = total1;
+      afterded.textContent = total2;
+      nettaxinc.textContent = total3;
+      taxoninc.textContent = taxtotal;
+      taxpayable.textContent = nettaxpay;
+      educess.textContent = educessfour;
+      taxwithcess.textContent = taxcess;
+      tds.textContent = tdsvalue;
+      refund.textContent = refunddue;
     }
 
     // Attach the calculateTotal function to the input event of each input field
@@ -220,8 +229,8 @@
     taxpercent.addEventListener('input', calculateTotal);
     rebate.addEventListener('input', calculateTotal);
     interest.addEventListener('input', calculateTotal);
-    tds.addEventListener('input', calculateTotal)
+    tds.addEventListener('input', calculateTotal);
     // Initial calculation when the page loads
     calculateTotal();
-</script>
+  </script>
 </html>
